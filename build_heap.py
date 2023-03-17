@@ -41,20 +41,20 @@ def main():
         print(len(swaps))
         for i, j in swaps:
             print(i, j)
-        elif text == "F":
-            filename = input()
-            file_path = f"./text/{filename}"
-            if "a" not in filename:
-                try:
-                    with open(file_path) as f:
-                        n = int(f.readline())
-                        data = list(map(int,f.readline().split()))
-                        assert len(data) == not
-                        swaps = build_heap(data)
-                        print(len(swaps))
-                        for i,j in swaps:
-                            print(i,j)
-                except:
-                    print("Error opening or reading file")
-                    if __name__ == "__main__":
-                        main()
+    elif text == "F":
+        filename = input()
+        file_path = f"./text/{filename}"
+        if "a" not in filename:
+            try:
+                with open(file_path) as f:
+                    n = int(f.readline())
+                    data = list(map(int,f.readline().split()))
+                    assert len(data) == not
+                    swaps = build_heap(data)
+                    print(len(swaps))
+                    for i,j in swaps:
+                        print(i,j)
+            except:
+                print("Error opening or reading file")
+                if __name__ == "__main__":
+                    main()
