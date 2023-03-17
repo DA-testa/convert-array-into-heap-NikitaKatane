@@ -2,8 +2,17 @@
 
 
 def build_heap(data):
+
     swaps = []
     n = len(data)
+    for i in range(n):
+        left_child = 2 *i +1
+        right_child = left_child +1
+        if left_child < n and data[left_child] <data[min_index]:
+            return swaps 
+        if right_child<n and data[right_child] < data[min_index]:
+            return swaps
+
     for i in range(n // 2, -1, -1):
 
         min_index = i
