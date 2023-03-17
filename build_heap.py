@@ -8,9 +8,9 @@ def build_heap(data):
 
         min_index = i
         left_child = 2 *i +1
+        right_child = left_child +1
         if left_child < n and data[left_child] <data[min_index]:
             min_index=left_child
-            right_child = 2* i +2
         if right_child<n and data[right_child] < data[min_index]:
             min_index = right_child
         if i != min_index:
