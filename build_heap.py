@@ -35,7 +35,7 @@ def main():
     if text == "I":
         n = int(input())
         data = list(map(int, input().split()))
-        if len(data) !== n:
+        if len(data) != n:
             print("Error: Invalid input")
             return
         swaps = build_heap(data)
@@ -50,7 +50,7 @@ def main():
                 with open(file_path) as f:
                     n = int(f.readline())
                     data = list(map(int,f.readline().split()))
-                    if len(data) !== n:
+                    if len(data) != n:
                         print("Error: Invalid input")
                         return
                     swaps = build_heap(data)
