@@ -27,6 +27,9 @@ def build_heap(data):
 
 def main():
     text = input("Enter I or F: ")
+    if text not in ["I", "F"]:
+        print("Error: Invalid input, expected 'I' or 'F'")
+        return
     if text == "I":
         n = int(input())
         data = list(map(int, input().split()))
