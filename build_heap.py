@@ -24,8 +24,8 @@ def build_heap(data):
                     swaps.append((min_index,j))
                     data[min_index],data[j] = data[j], data[min_index]
                     min_index =j
-                    else:
-                        break
+                else:
+                    break
                                 
 
     return swaps
