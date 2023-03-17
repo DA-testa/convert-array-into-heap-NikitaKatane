@@ -49,7 +49,7 @@ def main():
                 with open(file_path) as f:
                     n = int(f.readline())
                     data = list(map(int,f.readline().split()))
-                    assert len(data) == not
+                    assert len(data) == n
                     swaps = build_heap(data)
                     print(len(swaps))
                     for i,j in swaps:
