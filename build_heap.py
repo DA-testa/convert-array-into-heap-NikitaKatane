@@ -26,36 +26,36 @@ def build_heap(data):
 
 
 def main():
-    try:
-        text = input("Enter I or F: ")
-        if text not in ["I", "F"]:
-            raise ValueError("Invalid input, expected 'I' or 'F'")
-        if text == "I":
-            n = int(input())
-            data = list(map(int, input().split()))
-            if len(data) != n:
-                raise ValueError(f"Invalid input, expected {n} elements")
-            swaps = build_heap(data)
-            print(len(swaps))
-            for i, j in swaps:
-                print(i, j)
-        elif text == "F":
-            filename = input()
-            file_path = f"./text/{filename}"
-            if "a" not in filename:
-                try:
-                    with open(file_path) as f:
-                        n = int(f.readline())
-                        data = list(map(int, f.readline().split()))
-                        if len(data) != n:
-                            raise ValueError(f"Invalid input, expected {n} elements")
-                        swaps = build_heap(data)
-                        print(len(swaps))
-                        for i, j in swaps:
-                            print(i, j)
-                except FileNotFoundError:
-                    print(f"Error: File {filename} not found")
-                except:
-                    print("Error: Invalid input in file")
-    except ValueError as e:
-        print(f"Error: {str(e)}")
+    text = input("Enter I or F: ")
+    if text == "I":
+        n = int(input())
+        data = list(map(int, input().split()))
+        if len(data) != n:
+            print("Error: Invalid input, expected", n, "elements")
+            return
+        swaps = build_heap(data)
+        print(len(swaps))
+        for i, j in swaps:
+            print(i, j)
+    elif text == "F":
+        filename = input()
+        file_path = f"./text/{filename}"
+        if "a" not in filename:
+            try:
+                with open(file_path) as f:
+                    n = int(f.readline())
+                    data = list(map(int,f.readline().split()))
+                    if len(data) != n:
+                        print("Error: Invalid input, expected", n, "elements")
+                        return
+                    swaps = build_heap(data)
+                    print(len(swaps))
+                    for i,j in swaps:
+                        print(i,j)
+            except:
+                print("Error opening or reading file")
+    else:
+        print("Invalid input")
+
+if __name__ == "__main__":
+    main()
