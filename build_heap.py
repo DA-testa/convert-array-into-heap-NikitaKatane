@@ -26,7 +26,6 @@ def build_heap(data):
 
 
 def main():
-    text = input("Enter I or F: ")
     if text == "I":
         n = int(input())
         data = list(map(int, input().split()))
@@ -55,7 +54,7 @@ def main():
             except:
                 print("Error opening or reading file")
     else:
-        print("Invalid input")
+        print("Blyat input, blyat")
 
 if __name__ == "__main__":
     main()
