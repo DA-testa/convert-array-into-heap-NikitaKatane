@@ -26,6 +26,7 @@ def build_heap(data):
 
 
 def main():
+    text = input().strip()
     if text == "I":
         n = int(input())
         data = list(map(int, input().split()))
@@ -37,7 +38,7 @@ def main():
         for i, j in swaps:
             print(i, j)
     elif text == "F":
-        filename = input()
+        filename = input().strip()
         file_path = f"./text/{filename}"
         if "a" not in filename:
             try:
@@ -54,7 +55,7 @@ def main():
             except:
                 print("Error opening or reading file")
     else:
-        print("Blyat input, blyat")
+        print("Invalid input")
 
 if __name__ == "__main__":
     main()
