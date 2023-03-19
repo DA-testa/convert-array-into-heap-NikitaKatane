@@ -39,7 +39,7 @@ def main():
             print(i, j)
     elif text == "F":
         filename = input().strip()
-        file_path = f"./text/{filename}"
+        file_path = f"./text/{filename}.txt"
         if "a" not in filename:
             try:
                 with open(file_path) as f:
@@ -54,8 +54,9 @@ def main():
                         print(i,j)
             except:
                 print("Error opening or reading file")
-    else:
-        print("Invalid input")
+        else:
+            print("Invalid input")
+            
 
 if __name__ == "__main__":
     main()
